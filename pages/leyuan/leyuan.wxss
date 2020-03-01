@@ -1,0 +1,49 @@
+/* pages/leyuan/leyuan.wxss */
+
+image {
+  width: 750rpx;
+  height: 320rpx;
+}
+
+swiper {
+  height: 320rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  color: #3c3c3c;
+  font-weight: bold;
+  padding: 20rpx 30rpx 28rpx;
+}
+
+.item .info {
+  margin: 16rpx 30rpx;
+  position: relative;
+}
+
+.item .info .name {
+  font-size: 30rpx;
+  margin:0 130rpx 0 0;
+  color: #3c3c3c;
+}
+
+.item .info .free {
+  position: absolute;
+  font-size: 30rpx;
+  color: #fe6249;
+  right: 30rpx;
+  top: 0;
+}
+
+.item .info .desc {
+  font-size: 22rpx;
+  color: #848484;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.item .info .desc text {
+  margin: 0 30rpx 0 16rpx;
+}
+
+

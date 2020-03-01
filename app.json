@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/cards/cards",
-    "pages/center/center"
+    "pages/center/center",
+    "pages/leyuan/leyuan"
   ],
   "window": {
     "backgroundTextStyle": "dark",

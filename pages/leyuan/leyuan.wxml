@@ -1,0 +1,67 @@
+<!--pages/leyuan/leyuan.wxml  乐园首页-->
+<!-- ================ 轮播图 =================== -->
+<swiper indicator-dots="true" circular="true" autoplay="true" interval="3000">
+  <swiper-item>
+    <image src="/static/uploads/slide_1.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/static/uploads/slide_2.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/static/uploads/slide_3.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/static/uploads/slide_4.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/static/uploads/slide_5.jpg"></image>
+  </swiper-item>
+</swiper>
+
+<!-- =========== 乐园活动 ===================== -->
+<view class="title">乐园活动</view>
+
+<!-- ============ 活动推送 ================= -->
+<view class="item">
+  <navigator url="">
+    <image src="/static/uploads/item_1.png"></image>
+  </navigator>
+  <view class="info">
+    <view class="name">疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</view>
+    <view class="free">免费</view>
+    <view class="desc">
+      <text>200人已报名</text>
+      <text>本周六开始</text>
+    </view>
+  </view>
+</view>
+
+<!-- ============ 活动推送 ================= -->
+<view class="item">
+  <navigator url="">
+    <image src="/static/uploads/item_2.png"></image>
+  </navigator>
+  <view class="info">
+    <view class="name">疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</view>
+    <view class="free">免费</view>
+    <view class="desc">
+      <text>200人已报名</text>
+      <text>本周六开始</text>
+    </view>
+  </view>
+</view>
+
+<!-- ============ 活动推送 ================= -->
+<view class="item">
+  <navigator url="">
+    <image src="/static/uploads/item_3.png"></image>
+  </navigator>
+  <view class="info">
+    <view class="name">疯狂的红包 不一样的撕名牌 大型家庭亲子户外活动</view>
+    <view class="free">免费</view>
+    <view class="desc">
+      <text>200人已报名</text>
+      <text>本周六开始</text>
+    </view>
+  </view>
+</view>
