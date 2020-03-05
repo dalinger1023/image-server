@@ -1,13 +1,62 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
+.active {
+color: red;
 } 
 image {
   vertical-align: middle;
+}
+
+/* ============ 字体图标 ==================== */
+/*  网路资源托管路径: 
+https://dalinger1023.github.io/image-server/static
+ */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('https://dalinger1023.github.io/image-server/static/fonts/icomoon.eot?lzaqut');
+  src:  url('https://dalinger1023.github.io/image-server/static/fonts/icomoon.eot?lzaqut#iefix') format('embedded-opentype'),
+  url('https://dalinger1023.github.io/image-server/static/fonts/icomoon.ttf?lzaqut') format('truetype'),
+  url('https://dalinger1023.github.io/image-server/static/fonts/icomoon.woff?lzaqut') format('woff'),
+  url('https://dalinger1023.github.io/image-server/static/fonts/icomoon.svg?lzaqut#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-heart:before {
+  content: "\e900";
+}
+.icon-down:before {
+  content: "\e901";
+}
+.icon-clock:before {
+  content: "\e902";
+}
+.icon-location:before {
+  content: "\e903";
+}
+.icon-calendar:before {
+  content: "\e904";
+}
+.icon-headset:before {
+  content: "\e906";
+}
+.icon-flag:before {
+  content: "\f11d";
+}
+.icon-user:before {
+  content: "\f2c0";
 }

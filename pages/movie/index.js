@@ -1,4 +1,4 @@
-// pages/index/index.js
+// pages/movie/index.js
 Page({
 
   /**
@@ -6,26 +6,6 @@ Page({
    */
   data: {
 
-  },
-  tiao(){
-    wx.switchTab({
-      url: '/pages/center/center'
-    })
-  },
-  ceyan(){
-    wx.navigateTo({
-      url: '/pages/yanzhi/yanzhi'
-    })
-  },
-  ceshi(){
-    wx.navigateTo({
-      url: '/pages/ceshi/ceshi'
-    })
-  },
-  leyuan(){
-    wx.navigateTo({
-      url: '/pages/leyuan/leyuan'
-    })
   },
 
   /**

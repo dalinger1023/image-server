@@ -1,0 +1,153 @@
+<!--pages/test/test.wxml-->
+<text>====== 数据绑定  ======</text>
+
+<view>uname : {{uname}}</view>
+
+<view class="{{cls}}">class 绑定</view>
+<view data-uid="{{uid}}">自定义属性</view>
+<view class="{{cls}}">简单计算: {{1+1}}</view>
+<view data-uid="{{uid}}">复杂数据:{{info.age+'----'+info.gender}}</view>
+
+
+<text>====== 条件渲染 wx:if|elif|else======</text>
+
+<view wx:if="{{isShow}}">wx:if 显示 : {{uname}}</view>
+
+<view wx:if="{{!isShow}}">wx:if不显示 : {{uname}}</view>
+
+<view wx:if="{{info.age>=18}}">wx:if 显示年龄 : {{info.age}}</view>
+<view wx:else>wx:else 显示提示 : 未成年 </view>
+
+<view wx:if="{{score>=90}}">wx:if 显示 : 优秀</view>
+<view wx:elif="{{score>=60}}">wx:elif 显示提示 : 良好 </view>
+<view wx:else>wx:else 显示提示 : 不及格 </view>
+
+<text>====== 条件渲染 if 和 block ======</text>
+<!-- ====== wx:if 类似于VUE中的v-if: 控制render是否渲染节点 -->
+<!-- block 标签类似于VUE中的template雷锋标签, 不渲染  -->
+<block wx:if="isShow">
+  <view class="{{cls}}">block wx:if</view>
+  <view data-uid="{{uid}}">block wx:if</view>
+</block>
+<block wx:else>
+  <view class="{{cls}}">block wx:else</view>
+  <view data-uid="{{uid}}">block wx:else</view>
+</block>
+
+<text>=== 条件渲染 hidden 和 block ===</text>
+<block hidden="isShow">
+  <view class="{{cls}}" hidden="isShow">block hidden</view>
+  <view data-uid="{{uid}}">block hidden</view>
+</block>
+
+<block hidden="!isShow">
+  <view class="{{cls}}">block hidden="!isShow"</view>
+  <view data-uid="{{uid}}" hidden="isShow">block hidden="!isShow"</view>
+</block>
+
+<!-- ====== hidden 类似于VUE中的v-show: render渲染,控制CSS样式: display:none -->
+<!-- wx:if 有更高的切换消耗而 hidden 有更高的初始渲染消耗。因此，如果需要频繁切换的情景下，用 hidden 更好，如果在运行时条件不大可能改变则 wx:if 较好 -->
+
+<!-- 
+1. block不能和hidden一起使用, 因为block标签最终不会渲染出来，无法控制display, vue中的template标签 中 不能使用v-show是一致的
+2. block只能跟 wx:if wx:for一起使用
+3. 数据绑定: 布尔值,关键字(需要在双引号之内),不要直接写 checked="false"，其计算结果是一个字符串，转成 boolean 类型后代表真值。
+4. 数据绑定: 花括号和引号之间如果有空格，将最终被解析成为字符串,<view wx:for="{{[1,2,3]}} ">等同于<view wx:for="{{[1,2,3] + ' '}}">
+ -->
+
+<text>=== 列表渲染 wx:for ===</text>
+<!-- 
+1. wx:for  的值为字符串时，会将字符串解析成字符串数组
+2. wx:key [item中的唯一值],或者[*this], 提高性能
+3. wx:for-item 和 wx:for-index 给 item 和 index 改名字
+4. wx:for  花括号和引号之间如果有空格，将最终被解析成为字符串
+ -->
+<view class="{{cls}}" wx:for="{{list}}" wx:key="{{item}}"> 遍历项目:{{item}} ,遍历序号:{{index}}</view>
+<text>--------------------</text>
+<view wx:for="{{list}}" wx:for-index="k" wx:for-item="v" wx:key="*this"> 遍历项目:{{v}} ,遍历序号:{{k}}</view>
+<text>--------------------</text>
+<view wx:for="array">{{item}}</view>
+<text>--------------------</text>
+<view wx:for="{{['a','r','r','a','y']}}">{{item}}</view>
+<text>--------------------</text>
+<view wx:for="{{[1,2,3]}} ">{{item}}</view>
+<text>--------------------</text>
+<view wx:for="{{[1,2,3] + ' '}}">{{item}}</view>
+
+<text>=== 事件处理 bind事件类型 ===</text>
+<!-- 
+1. 除 bind 外，也可以用 catch 来绑定事件。与 bind 不同， catch 会阻止事件向上冒泡。
+2. 所有 mut-bind 是“互斥”的，只会有其中一个绑定函数被触发。同时，它完全不影响 bind 和 catch 的绑定效果。
+3. 在捕获阶段监听事件时，可以采用capture-bind、capture-catch关键字，后者将中断捕获阶段和取消冒泡阶段。
+4. 事件对象:
+    4.1 e.target 触发的事件对象(点击的)
+    4.2 e.currentTarget 绑定事件的对象(事件源)
+    4.3 自定义属性:data-info的值, 用e.currentTarget.dataset.info 获取
+ --> 
+<view class="{{cls}}"> {{num}} </view>
+<button bindlongpress="handleLongpress" bindtap="handleTap" type="primary">点击</button>
+
+<text>----------bind冒泡----------</text>
+<view id="outer" bindtap="handleTap1">
+  outer view
+  <view id="middle" bindtap="handleTap2">
+    middle view
+    <view id="inner" bindtap="handleTap3">
+      inner view
+    </view>
+  </view>
+</view>
+
+<text>--------catch阻止冒泡--------</text>
+<view id="outer" catchtap="handleTap1">
+  outer view
+  <view id="middle" catchtap="handleTap2">
+    middle view
+    <view id="inner" catchtap="handleTap3">
+      inner view
+    </view>
+  </view>
+</view>
+
+<text>--------mut-bind:互斥事件--------</text>
+<view id="outer" mut-bind:tap="handleTap1">
+  outer view
+  <view id="middle" bindtap="handleTap2">
+    middle view
+    <view id="inner" mut-bind:tap="handleTap3">
+      inner view
+    </view>
+  </view>
+</view>
+
+<text>--------capture-bind:捕获--------</text>
+<view id="outer" bind:touchstart="handleTap1" capture-bind:touchstart="handleTap2">
+  outer view
+  <view id="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
+    inner view
+  </view>
+</view>
+
+<text>--------capture-catch:捕获阻止--------</text>
+<view id="outer" bind:touchstart="handleTap1" capture-catch:touchstart="handleTap2">
+  outer view
+  <view id="inner" bind:touchstart="handleTap3" capture-catch:touchstart="handleTap4">
+    inner view
+  </view>
+</view>
+
+<text>--------事件对象--------</text>
+<view id="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
+    inner view
+</view>
+<view  id="info" data-info="view-maopao" mark:myMark="last" bindtap="bindViewTap">
+  <button id="btn" mark:anotherMark="leaf" bindtap="bindButtonTap">按钮</button>
+</view>
+
+<text>-------- 调用全局方法,获取全局数据 --------</text>
+<view>{{infoAp}}</view>
+
+
+<text>===== API 测试 =========</text>
+<text>-------- 提示 --------</text>
+<button id="btn" type="primary"  bindtap="testTap">按钮</button>

@@ -1,0 +1,5 @@
+/* pages/yanzhi/yanzhi.wxss */
+
+.bl {
+  height: 80rpx;
+}

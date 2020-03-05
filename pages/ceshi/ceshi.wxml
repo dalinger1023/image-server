@@ -1,0 +1,13 @@
+<!--pages/ceshi/ceshi.wxml-->
+<image></image>
+
+<!--  ===============测试结果============ -->
+<view class="res">
+  <view>年龄：{{result && result.age}}</view>
+  <view>性别：{{result && result.gender>50?'男':'女'}}</view>
+  <view>魅力指数：{{result && result.beauty}}</view>
+  <view>是否戴眼镜：{{result && result.glass===0?'否':'是'}}</view>
+</view>
+
+<!-- ============== 测试按钮 ================ -->
+<button class="btn" type="primary" bind:tap="ceshi">点击测颜值</button>

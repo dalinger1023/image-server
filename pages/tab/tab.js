@@ -1,31 +1,16 @@
-// pages/index/index.js
+// pages/tab/tab.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    currentId:'1'
   },
-  tiao(){
-    wx.switchTab({
-      url: '/pages/center/center'
-    })
-  },
-  ceyan(){
-    wx.navigateTo({
-      url: '/pages/yanzhi/yanzhi'
-    })
-  },
-  ceshi(){
-    wx.navigateTo({
-      url: '/pages/ceshi/ceshi'
-    })
-  },
-  leyuan(){
-    wx.navigateTo({
-      url: '/pages/leyuan/leyuan'
-    })
+  handleChange(e){
+    this.currentId = e.currentTarget.dataset.id
+    
+    console.log(e.currentTarget.dataset)
   },
 
   /**

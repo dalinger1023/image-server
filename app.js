@@ -1,4 +1,4 @@
-//app.js
+//app.js  图片网络地址: https://dalinger1023.github.io/image-server/
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -34,6 +34,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    info:'你好'
+  },
+  showInfo(){
+    console.log('showInfo',this.globalData.info)
   }
 })

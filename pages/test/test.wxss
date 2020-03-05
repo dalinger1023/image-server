@@ -1,0 +1,7 @@
+/* pages/test/test.wxss */
+
+/* 默认有个跟标签page, 只要有高度,背景色会默认全部填充,类似于html */
+page {
+  height: 400rpx;
+  background-color: pink;
+}

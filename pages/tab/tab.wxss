@@ -1,0 +1,18 @@
+/* pages/tab/tab.wxss */
+.tab .title{
+  display: flex;
+}
+.tab .title button {
+  flex: 1;
+}
+.tab .title button.active {
+  background-color: skyblue;
+}
+.tab .content {
+  height: 200rpx;
+  background-color: pink;
+  display: none;
+}
+.tab .content.active{
+  display: block;
+}

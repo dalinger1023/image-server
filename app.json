@@ -3,7 +3,12 @@
     "pages/index/index",
     "pages/cards/cards",
     "pages/center/center",
-    "pages/leyuan/leyuan"
+    "pages/leyuan/leyuan",
+    "pages/test/test",
+    "pages/tab/tab",
+    "pages/movie/index",
+    "pages/yanzhi/yanzhi",
+    "pages/ceshi/ceshi"
   ],
   "window": {
     "backgroundTextStyle": "dark",

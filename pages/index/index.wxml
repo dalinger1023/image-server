@@ -1,23 +1,37 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
 
-<navigator url="/pages/center/center"
+<!-- <navigator url="/pages/center/center"
 open-type="switchTab">
 跳转到 [我的] tab菜单页面 ==> open-type="switchTab"
-</navigator>
+</navigator> -->
 
-<navigator url="/pages/leyuan/leyuan"
+<!-- <navigator url="/pages/leyuan/leyuan"
 open-type="navigate">
-跳转到游乐园轮播图页面 ==> open-type="navigate" (有回退箭)
-</navigator>
+跳转到游乐园首页
+</navigator> -->
 
-<navigator url="/pages/leyuan/leyuan"
+<!-- <navigator url="/pages/leyuan/leyuan"
 open-type="redirect">
 跳转到游乐园轮播图页面 ==> open-type="redirect"
-</navigator>
+</navigator> -->
 
-<navigator url="/pages/leyuan/leyuan"
+<!-- <navigator url="/pages/leyuan/leyuan"
 open-type="reLaunch">
 跳转到游乐园轮播图页面 ==> open-type="reLaunch"
-</navigator>
+</navigator> -->
+
+
+
+<!-- <navigator url="/pages/test/test"
+open-type="navigate">
+到测试页 (有回退箭)
+</navigator> -->
+
+<button bind:tap="leyuan">到游乐园</button>
+
+<button bind:tap="tiao">到个人中心</button>
+
+<button bind:tap="ceyan">测试颜值 1号</button>
+<button bind:tap="ceshi">测试颜值 2号</button>
+
 

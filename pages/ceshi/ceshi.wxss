@@ -1,0 +1,10 @@
+/* pages/ceshi/ceshi.wxss */
+page {
+  background-image: url('https://c-ssl.duitang.com/uploads/item/201510/05/20151005060912_wzx2h.jpeg')
+}
+.btn {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}

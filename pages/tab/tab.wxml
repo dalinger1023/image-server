@@ -1,0 +1,25 @@
+<!--pages/tab/tab.wxml-->
+<text>====== 案例: tab栏 =========</text>
+<!-- 1
+<view class="tab">
+  <view class="title" bindtap="handleChange">
+    <button data-id="1" class="{{currentId=== '1'?'active':''}}">tab1</button>
+    <button data-id="2" class="{{currentId=== '1'?'active':''}}">tab2</button>
+    <button data-id="3" class="{{currentId=== '1'?'active':''}}">tab2</button>
+  </view>
+  <view class="content" class="{{currentId=== '1'?'active':''}}">content1</view>
+  <view class="content" class="{{currentId=== '1'?'active':''}}">content2</view>
+  <view class="content" class="{{currentId=== '1'?'active':''}}">content3</view>
+</view>
+ -->
+
+<view class="tab">
+  <view class="title" bindtap="handleChange">
+    <button data-id="1" class="{{currentId=== '1'?'active':''}}">tab1</button>
+    <button data-id="2" class="{{currentId=== '1'?'active':''}}">tab2</button>
+    <button data-id="3" class="{{currentId=== '1'?'active':''}}">tab2</button>
+  </view>
+  <view class="content" class="{{currentId=== '1'?'active':''}}">content1</view>
+  <view class="content" class="{{currentId=== '1'?'active':''}}">content2</view>
+  <view class="content" class="{{currentId=== '1'?'active':''}}">content3</view>
+</view>

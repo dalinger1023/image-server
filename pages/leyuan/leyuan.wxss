@@ -43,7 +43,10 @@ swiper {
 }
 
 .item .info .desc text {
-  margin: 0 30rpx 0 16rpx;
+  margin-right: 16rpx;
+}
+.item .info .desc text:before {
+  padding-right: 16rpx;
 }
 
 
