@@ -1,6 +1,6 @@
 /* pages/ceshi/ceshi.wxss */
 page {
-  background-image: url('https://c-ssl.duitang.com/uploads/item/201510/05/20151005060912_wzx2h.jpeg')
+  background: no-repeat url('https://dalinger1023.github.io/image-server/static/images/timg.jpg');
 }
 .btn {
   position: absolute;
